@@ -1,0 +1,9 @@
+<% if current_user %>
+    <p> Hello <%= current_user.email %> </p>
+    <p> <%=link_to "signout", destroy_user_session_path, method: :delete %> </p>
+<% else %>
+    <p><%=link_to "signin", new_user_session_path %></p>
+    <p> <%=link_to "signup", user_session_path %></p>
+<%end%>
+<hr/>
+<h1>HOME PAGE</h1>
